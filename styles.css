@@ -1,0 +1,15 @@
+body {
+    background: black;
+
+}
+
+h1 {
+    background: yellow;
+}
+
+#table {
+    background: yellow;
+}
+#button1 {
+    border-radius: 12px;
+}
