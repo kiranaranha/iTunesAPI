@@ -1,81 +1,18 @@
 function start(){
     var artist = document.getElementById("artistSelect").value;
-    console.log(artist == "TBeatles");
-    if(artist == "JJohnson") {
-        $.ajax({
-            url: "https://itunes.apple.com/search?term=jack+johnson",
-            type: 'GET',
-            crossDomain: true,
-            dataType: 'jsonp',
-            success: function (result) {
-                console.log(result);
-                myFunction(result);
-            },
-            error: function () {
-                alert('Failed!');
-            }
-        });
-    }
-    if(artist == "TBeatles") {
-        $.ajax({
-            url: "https://itunes.apple.com/search?term=the+beatles",
-            type: 'GET',
-            crossDomain: true,
-            dataType: 'jsonp',
-            success: function (result) {
-                console.log(result);
-                myFunction(result);
-            },
-            error: function () {
-                alert('Failed!');
-            }
-        });
-    }
-    if(artist == "HWilliams") {
-        $.ajax({
-            url: "https://itunes.apple.com/search?term=hank+williams",
-            type: 'GET',
-            crossDomain: true,
-            dataType: 'jsonp',
-            success: function (result) {
-                console.log(result);
-                myFunction(result);
-            },
-            error: function () {
-                alert('Failed!');
-            }
-        });
-    }
-    if(artist == "Queen") {
-        $.ajax({
-            url: "https://itunes.apple.com/search?term=queen",
-            type: 'GET',
-            crossDomain: true,
-            dataType: 'jsonp',
-            success: function (result) {
-                console.log(result);
-                myFunction(result);
-            },
-            error: function () {
-                alert('Failed!');
-            }
-        });
-    }
-    if(artist == "SWonder") {
-        $.ajax({
-            url: "https://itunes.apple.com/search?term=stevie+wonder",
-            type: 'GET',
-            crossDomain: true,
-            dataType: 'jsonp',
-            success: function (result) {
-                console.log(result);
-                myFunction(result);
-            },
-            error: function () {
-                alert('Failed!');
-            }
-        });
-    }
+    $.ajax({
+        url: "https://itunes.apple.com/search?term=" + artist,
+        type: 'GET',
+        crossDomain: true,
+        dataType: 'jsonp',
+        success: function (result) {
+            console.log(result);
+            myFunction(result);
+        },
+        error: function () {
+            alert('Failed!');
+        }
+    });
 }
 
 function myFunction(results) {
